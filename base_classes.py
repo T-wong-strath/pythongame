@@ -23,9 +23,9 @@ messages_dict = {
 def to_user(message,message_type="narrator"):
     color = messages_dict[message_type]
     for c in message:
-        print(colored(c, color), end='')
+        print(colored(c, color), end='',flush=True)
         time.sleep(0.05)
-    print(' ')
+    print(' ',flush=True)
         
     
 class Character(object):
@@ -117,6 +117,8 @@ player.give_item(player_weapon)
 # Create an evil boi
 enemy = Character('Goblin')
 to_user('A wild '+str(enemy.name)+' has appeared!')
+
+# Test comment
 
 
 
